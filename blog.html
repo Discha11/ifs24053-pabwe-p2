@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Viewport wajib untuk Bootstrap 5 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog AI — Sinaptik AI</title>
+    <meta name="description" content="Artikel seputar generative AI, machine learning, etika AI, dan tools dari tim Sinaptik AI." />
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+
+    <!-- Google Fonts (sama dengan landing page agar brand konsisten) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3.8 (CDN jsDelivr) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons (bi bi-nama-ikon) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Penyesuaian kecil (warna & font brand). Dimuat setelah Bootstrap. -->
+    <link rel="stylesheet" href="assets/css/blog.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         NAVBAR (Bootstrap): Beranda, Blog, CV
+         Brand & warna disamakan dengan landing page.
+    ====================================================== -->
+    <nav class="navbar navbar-expand-lg sticky-top site-navbar" aria-label="Navigasi utama">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="assets/img/logo.svg" alt="" width="36" height="36" />
+          <span class="text-body">Sinaptik<span>AI</span></span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Buka menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"><i class="bi bi-house me-1"></i>Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="blog.html" aria-current="page"><i class="bi bi-journal-text me-1"></i>Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cv.html"><i class="bi bi-person-badge me-1"></i>CV</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- =====================================================
+           PAGE HEADER
+      ====================================================== -->
+      <header class="page-header py-5">
+        <div class="container py-md-4">
+          <h1 class="mb-3">Blog Sinaptik AI</h1>
+          <p class="lead mb-0">
+            Catatan praktis dari proyek kami tentang generative AI, machine learning, dan cara
+            memakainya secara bertanggung jawab.
+          </p>
+        </div>
+      </header>
+
+      <!-- =====================================================
+           DAFTAR ARTIKEL
+           Grid Bootstrap: 1 kolom (mobile), 2 kolom (md), 3 kolom (lg).
+           Filter kategori sederhana memakai sedikit JavaScript di bawah.
+      ====================================================== -->
+      <section class="container py-5" aria-labelledby="judul-daftar">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+          <h2 class="h4 mb-0" id="judul-daftar">Artikel terbaru</h2>
+          <div class="filter-bar d-flex flex-wrap gap-2" role="group" aria-label="Filter kategori">
+          <button type="button" class="btn btn-outline-secondary active" data-filter="Semua" aria-pressed="true">Semua</button>
+          <button type="button" class="btn btn-outline-secondary" data-filter="Generative AI" aria-pressed="false">Generative AI</button>
+          <button type="button" class="btn btn-outline-secondary" data-filter="Machine Learning" aria-pressed="false">Machine Learning</button>
+          <button type="button" class="btn btn-outline-secondary" data-filter="Etika AI" aria-pressed="false">Etika AI</button>
+          <button type="button" class="btn btn-outline-secondary" data-filter="Tools" aria-pressed="false">Tools</button>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="daftar-artikel">
+
+          <!-- Artikel: RAG: Cara Membuat Chatbot Menjawab dari Dokumen Perusahaan Anda -->
+          <div class="col" data-category="Generative AI">
+            <article class="card post-card h-100">
+              <a href="blog-detail.html" tabindex="-1" aria-hidden="true">
+                <img src="assets/img/blog-rag.svg" class="card-img-top" alt="Ilustrasi alur RAG dari dokumen ke jawaban" loading="lazy" />
+              </a>
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-cat align-self-start mb-3">
+                  <i class="bi bi-stars me-1"></i>Generative AI
+                </span>
+                <h2 class="h5 card-title">
+                  <a href="blog-detail.html">RAG: Cara Membuat Chatbot Menjawab dari Dokumen Perusahaan Anda</a>
+                </h2>
+                <p class="card-text text-secondary">Model bahasa tidak tahu isi SOP dan katalog Anda. RAG menyambungkannya ke dokumen agar jawabannya punya sumber.</p>
+
+                <ul class="list-inline post-meta mt-auto mb-3">
+                  <li class="list-inline-item"><i class="bi bi-person me-1"></i>Rani Pasaribu</li>
+                  <li class="list-inline-item"><i class="bi bi-calendar me-1"></i>14 Sep 2026</li>
+                  <li class="list-inline-item"><i class="bi bi-clock me-1"></i>6 menit</li>
+                </ul>
+                <a href="blog-detail.html" class="btn btn-outline-brand btn-sm align-self-start">
+                  Baca selengkapnya <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Artikel: Cara Kerja Large Language Model, Dijelaskan Tanpa Rumus -->
+          <div class="col" data-category="Generative AI">
+            <article class="card post-card h-100">
+              <a href="blog-detail.html" tabindex="-1" aria-hidden="true">
+                <img src="assets/img/blog-llm.svg" class="card-img-top" alt="Ilustrasi kotak-kotak token pada LLM" loading="lazy" />
+              </a>
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-cat align-self-start mb-3">
+                  <i class="bi bi-stars me-1"></i>Generative AI
+                </span>
+                <h2 class="h5 card-title">
+                  <a href="blog-detail.html">Cara Kerja Large Language Model, Dijelaskan Tanpa Rumus</a>
+                </h2>
+                <p class="card-text text-secondary">Dari token sampai prediksi kata berikutnya: gambaran sederhana tentang apa yang terjadi saat Anda mengetik pertanyaan ke chatbot.</p>
+
+                <ul class="list-inline post-meta mt-auto mb-3">
+                  <li class="list-inline-item"><i class="bi bi-person me-1"></i>Dimas Aditya</li>
+                  <li class="list-inline-item"><i class="bi bi-calendar me-1"></i>8 Sep 2026</li>
+                  <li class="list-inline-item"><i class="bi bi-clock me-1"></i>5 menit</li>
+                </ul>
+                <a href="blog-detail.html" class="btn btn-outline-brand btn-sm align-self-start">
+                  Baca selengkapnya <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Artikel: Prompt Engineering: 5 Pola yang Membuat Jawaban Model Lebih Konsisten -->
+          <div class="col" data-category="Tools">
+            <article class="card post-card h-100">
+              <a href="blog-detail.html" tabindex="-1" aria-hidden="true">
+                <img src="assets/img/blog-prompt.svg" class="card-img-top" alt="Ilustrasi jendela editor berisi prompt" loading="lazy" />
+              </a>
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-cat align-self-start mb-3">
+                  <i class="bi bi-tools me-1"></i>Tools
+                </span>
+                <h2 class="h5 card-title">
+                  <a href="blog-detail.html">Prompt Engineering: 5 Pola yang Membuat Jawaban Model Lebih Konsisten</a>
+                </h2>
+                <p class="card-text text-secondary">Peran, konteks, contoh, format, dan batasan. Lima pola sederhana yang langsung bisa dipakai di pekerjaan sehari-hari.</p>
+
+                <ul class="list-inline post-meta mt-auto mb-3">
+                  <li class="list-inline-item"><i class="bi bi-person me-1"></i>Sekar Wulandari</li>
+                  <li class="list-inline-item"><i class="bi bi-calendar me-1"></i>2 Sep 2026</li>
+                  <li class="list-inline-item"><i class="bi bi-clock me-1"></i>4 menit</li>
+                </ul>
+                <a href="blog-detail.html" class="btn btn-outline-brand btn-sm align-self-start">
+                  Baca selengkapnya <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Artikel: Etika AI di Perusahaan: Mulai dari Tiga Pertanyaan Sederhana -->
+          <div class="col" data-category="Etika AI">
+            <article class="card post-card h-100">
+              <a href="blog-detail.html" tabindex="-1" aria-hidden="true">
+                <img src="assets/img/blog-etika.svg" class="card-img-top" alt="Ilustrasi timbangan untuk etika AI" loading="lazy" />
+              </a>
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-cat align-self-start mb-3">
+                  <i class="bi bi-shield-check me-1"></i>Etika AI
+                </span>
+                <h2 class="h5 card-title">
+                  <a href="blog-detail.html">Etika AI di Perusahaan: Mulai dari Tiga Pertanyaan Sederhana</a>
+                </h2>
+                <p class="card-text text-secondary">Siapa yang terdampak, data siapa yang dipakai, dan siapa yang bertanggung jawab jika keliru. Tiga pertanyaan sebelum peluncuran.</p>
+
+                <ul class="list-inline post-meta mt-auto mb-3">
+                  <li class="list-inline-item"><i class="bi bi-person me-1"></i>Bagas Simanjuntak</li>
+                  <li class="list-inline-item"><i class="bi bi-calendar me-1"></i>27 Agu 2026</li>
+                  <li class="list-inline-item"><i class="bi bi-clock me-1"></i>7 menit</li>
+                </ul>
+                <a href="blog-detail.html" class="btn btn-outline-brand btn-sm align-self-start">
+                  Baca selengkapnya <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Artikel: Computer Vision di Pabrik: Dari Foto Cacat ke Keputusan Otomatis -->
+          <div class="col" data-category="Machine Learning">
+            <article class="card post-card h-100">
+              <a href="blog-detail.html" tabindex="-1" aria-hidden="true">
+                <img src="assets/img/blog-vision.svg" class="card-img-top" alt="Ilustrasi deteksi objek dengan kotak pembatas" loading="lazy" />
+              </a>
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-cat align-self-start mb-3">
+                  <i class="bi bi-cpu me-1"></i>Machine Learning
+                </span>
+                <h2 class="h5 card-title">
+                  <a href="blog-detail.html">Computer Vision di Pabrik: Dari Foto Cacat ke Keputusan Otomatis</a>
+                </h2>
+                <p class="card-text text-secondary">Bagaimana kamera dan model deteksi objek dipakai untuk menyortir produk cacat lebih cepat daripada inspeksi manual.</p>
+
+                <ul class="list-inline post-meta mt-auto mb-3">
+                  <li class="list-inline-item"><i class="bi bi-person me-1"></i>Nadia Putri</li>
+                  <li class="list-inline-item"><i class="bi bi-calendar me-1"></i>19 Agu 2026</li>
+                  <li class="list-inline-item"><i class="bi bi-clock me-1"></i>6 menit</li>
+                </ul>
+                <a href="blog-detail.html" class="btn btn-outline-brand btn-sm align-self-start">
+                  Baca selengkapnya <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Artikel: MLOps untuk Pemula: Mengapa Model Akurat Bisa Gagal di Produksi -->
+          <div class="col" data-category="Machine Learning">
+            <article class="card post-card h-100">
+              <a href="blog-detail.html" tabindex="-1" aria-hidden="true">
+                <img src="assets/img/blog-mlops.svg" class="card-img-top" alt="Ilustrasi alur MLOps dari data sampai pemantauan" loading="lazy" />
+              </a>
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-cat align-self-start mb-3">
+                  <i class="bi bi-cpu me-1"></i>Machine Learning
+                </span>
+                <h2 class="h5 card-title">
+                  <a href="blog-detail.html">MLOps untuk Pemula: Mengapa Model Akurat Bisa Gagal di Produksi</a>
+                </h2>
+                <p class="card-text text-secondary">Data berubah, pengguna berubah, model pun menurun. Pengantar singkat tentang pemantauan dan siklus rilis model.</p>
+
+                <ul class="list-inline post-meta mt-auto mb-3">
+                  <li class="list-inline-item"><i class="bi bi-person me-1"></i>Yohanes Sitorus</li>
+                  <li class="list-inline-item"><i class="bi bi-calendar me-1"></i>11 Agu 2026</li>
+                  <li class="list-inline-item"><i class="bi bi-clock me-1"></i>5 menit</li>
+                </ul>
+                <a href="blog-detail.html" class="btn btn-outline-brand btn-sm align-self-start">
+                  Baca selengkapnya <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Pagination (contoh tampilan, opsional) -->
+        <nav class="mt-5" aria-label="Halaman artikel">
+          <ul class="pagination justify-content-center mb-0">
+            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"><i class="bi bi-chevron-left"></i></a></li>
+            <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+          </ul>
+        </nav>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="site-footer py-4 mt-5">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+        <a href="index.html" class="brand d-inline-flex align-items-center gap-2 text-decoration-none">
+          <img src="assets/img/logo.svg" alt="" width="28" height="28" />
+          <span class="text-white">Sinaptik<span>AI</span></span>
+        </a>
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item me-3"><a href="index.html">Beranda</a></li>
+          <li class="list-inline-item me-3"><a href="blog.html">Blog</a></li>
+          <li class="list-inline-item"><a href="cv.html">CV</a></li>
+        </ul>
+        <small>&copy; 2026 Sinaptik AI. Dibuat untuk Praktikum PABWE.</small>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS bundle (untuk navbar collapse di layar kecil) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Filter kategori: tampilkan/sembunyikan kartu berdasarkan atribut data-category -->
+    <script>
+      const buttons = document.querySelectorAll("[data-filter]");
+      const items = document.querySelectorAll("#daftar-artikel > [data-category]");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.dataset.filter;
+
+          // Tandai tombol yang aktif
+          buttons.forEach((b) => {
+            const aktif = b === btn;
+            b.classList.toggle("active", aktif);
+            b.setAttribute("aria-pressed", aktif);
+          });
+
+          // d-none = utility Bootstrap untuk display: none
+          items.forEach((item) => {
+            const cocok = filter === "Semua" || item.dataset.category === filter;
+            item.classList.toggle("d-none", !cocok);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

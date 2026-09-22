@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Viewport wajib agar utility responsive (sm:/md:/lg:) bekerja -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV — Nama Lengkap Kamu</title>
+    <meta name="description" content="Curriculum Vitae digital: profil, pendidikan, pengalaman, keahlian, dan proyek." />
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+
+    <!-- Google Fonts (sama dengan halaman lain agar brand konsisten) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS 4 — Play CDN (untuk praktikum / prototyping) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Tabler Icons (webfont): pakai class "ti ti-nama-ikon" -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+
+    <!--
+      Tailwind v4: konfigurasi lewat CSS dengan @theme.
+      Token di bawah menghasilkan class baru, misalnya:
+      --color-ink     → bg-ink, text-ink, border-ink
+      --color-indigo  → bg-indigo, text-indigo
+      --font-display  → font-display
+      Warnanya sama dengan landing page & blog agar brand konsisten.
+    -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-ink: #0f1533;
+        --color-ink-soft: #1b2150;
+        --color-indigo: #4a45e0;
+        --color-indigo-dark: #3a35c4;
+        --color-indigo-soft: #ecebfc;
+        --color-signal: #27d6a5;
+        --color-paper: #f5f6fb;
+        --color-line: #dde1f0;
+        --color-muted: #5b6385;
+
+        --font-display: "Bricolage Grotesque", "Segoe UI", sans-serif;
+        --font-sans: "DM Sans", "Segoe UI", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="bg-paper font-sans text-ink antialiased">
+    <!-- =====================================================
+         NAVBAR
+         sticky + flex + responsive. Link ke Beranda, Blog, CV.
+    ====================================================== -->
+    <header class="sticky top-0 z-50 border-b border-line bg-white/90 backdrop-blur">
+      <nav
+        class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3"
+        aria-label="Navigasi utama"
+      >
+        <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold tracking-tight">
+          <img src="assets/img/logo.svg" alt="" class="size-9" />
+          <span>Sinaptik<span class="text-indigo">AI</span></span>
+        </a>
+
+        <ul class="flex items-center gap-1 text-sm font-medium">
+          <li>
+            <a href="index.html" class="rounded-lg px-3 py-2 text-muted transition hover:bg-paper hover:text-indigo">
+              <i class="ti ti-home align-[-2px]"></i>
+              <span class="hidden sm:inline">Beranda</span>
+            </a>
+          </li>
+          <li>
+            <a href="blog.html" class="rounded-lg px-3 py-2 text-muted transition hover:bg-paper hover:text-indigo">
+              <i class="ti ti-article align-[-2px]"></i>
+              <span class="hidden sm:inline">Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="cv.html" aria-current="page" class="rounded-lg bg-paper px-3 py-2 text-indigo">
+              <i class="ti ti-id-badge-2 align-[-2px]"></i>
+              <span class="hidden sm:inline">CV</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-4 py-8 md:py-12">
+      <!-- =====================================================
+           1. HEADER PROFIL
+           ⚠ GANTI semua data di halaman ini dengan data dirimu sendiri.
+           Foto: ganti assets/img/avatar.svg dengan foto (mis. foto.jpg).
+      ====================================================== -->
+      <section
+        class="flex flex-col items-center gap-6 rounded-3xl bg-ink p-6 text-white md:flex-row md:items-start md:gap-8 md:p-10"
+        aria-labelledby="nama"
+      >
+        <img
+          src="assets/img/avatar.svg"
+          alt="Foto profil"
+          class="size-32 shrink-0 rounded-2xl object-cover ring-4 ring-signal/40 md:size-40"
+        />
+
+        <div class="text-center md:text-left">
+          <h1 id="nama" class="font-display text-3xl font-extrabold tracking-tight md:text-5xl">
+            Nama Lengkap Kamu
+          </h1>
+          <p class="mt-2 text-lg font-medium text-signal">Aspiring AI Engineer &amp; Full-Stack Developer</p>
+
+          <!-- Kontak: 1 kolom di mobile, 2 kolom mulai sm -->
+          <ul class="mt-6 grid gap-x-8 gap-y-2 text-sm text-slate-300 sm:grid-cols-2">
+            <li class="flex items-center justify-center gap-2 md:justify-start">
+              <i class="ti ti-mail text-signal"></i>
+              <a href="mailto:nama.kamu@email.com" class="transition hover:text-white">nama.kamu@email.com</a>
+            </li>
+            <li class="flex items-center justify-center gap-2 md:justify-start">
+              <i class="ti ti-brand-whatsapp text-signal"></i>
+              <a href="https://wa.me/6281200000000" target="_blank" rel="noopener" class="transition hover:text-white">+62 812-0000-0000</a>
+            </li>
+            <li class="flex items-center justify-center gap-2 md:justify-start">
+              <i class="ti ti-map-pin text-signal"></i>
+              <span>Sumatera Utara, Indonesia</span>
+            </li>
+            <li class="flex items-center justify-center gap-2 md:justify-start">
+              <i class="ti ti-brand-github text-signal"></i>
+              <a href="https://github.com/username" target="_blank" rel="noopener" class="transition hover:text-white">github.com/username</a>
+            </li>
+            <li class="flex items-center justify-center gap-2 md:justify-start">
+              <i class="ti ti-brand-linkedin text-signal"></i>
+              <a href="https://linkedin.com/in/username" target="_blank" rel="noopener" class="transition hover:text-white">linkedin.com/in/username</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           LAYOUT 2 KOLOM (1 kolom di mobile, 3 kolom grid di md)
+           Kolom utama = 2/3 lebar; sidebar = 1/3 lebar.
+      ====================================================== -->
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        <!-- ================= KOLOM UTAMA ================= -->
+        <div class="space-y-6 md:col-span-2">
+          <!-- 2. RINGKASAN -->
+          <section class="rounded-2xl border border-line bg-white p-6" aria-labelledby="ringkasan">
+            <h2 id="ringkasan" class="mb-3 flex items-center gap-2 font-display text-xl font-bold">
+              <i class="ti ti-user text-indigo"></i> Ringkasan
+            </h2>
+            <p class="leading-relaxed text-muted">
+              Mahasiswa Informatika yang tertarik membangun aplikasi web dan sistem berbasis
+              kecerdasan buatan. Terbiasa mengerjakan antarmuka yang responsif dengan HTML, CSS,
+              Bootstrap, dan Tailwind. Sedang mendalami pemanfaatan model bahasa untuk membantu
+              pekerjaan sehari-hari.
+            </p>
+          </section>
+
+          <!-- 4. PENGALAMAN (minimal 2 item) — tampilan timeline -->
+          <section class="rounded-2xl border border-line bg-white p-6" aria-labelledby="pengalaman">
+            <h2 id="pengalaman" class="mb-5 flex items-center gap-2 font-display text-xl font-bold">
+              <i class="ti ti-briefcase text-indigo"></i> Pengalaman
+            </h2>
+
+            <ol class="space-y-6 border-l-2 border-line pl-6">
+              <li class="relative">
+                <span class="absolute top-1.5 -left-[31px] size-3 rounded-full bg-signal ring-4 ring-white"></span>
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                  <h3 class="font-display text-lg font-bold">Asisten Praktikum Pemrograman Web</h3>
+                  <span class="text-sm font-medium text-indigo">2025 – 2026</span>
+                </div>
+                <p class="text-sm text-muted">Program Studi Informatika</p>
+                <ul class="mt-2 list-disc space-y-1 pl-5 text-muted marker:text-indigo">
+                  <li>Mendampingi mahasiswa semester awal saat praktikum HTML, CSS, dan JavaScript.</li>
+                  <li>Menyiapkan contoh kode dan memeriksa tugas mingguan.</li>
+                </ul>
+              </li>
+
+              <li class="relative">
+                <span class="absolute top-1.5 -left-[31px] size-3 rounded-full bg-indigo ring-4 ring-white"></span>
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                  <h3 class="font-display text-lg font-bold">Anggota Divisi Teknologi</h3>
+                  <span class="text-sm font-medium text-indigo">2024 – 2025</span>
+                </div>
+                <p class="text-sm text-muted">Himpunan Mahasiswa Informatika</p>
+                <ul class="mt-2 list-disc space-y-1 pl-5 text-muted marker:text-indigo">
+                  <li>Membangun website pendaftaran untuk acara seminar teknologi tingkat kampus.</li>
+                  <li>Merapikan repositori kode organisasi dengan alur Git yang seragam.</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+
+          <!-- 7. PROYEK (minimal 2 proyek; menaut ke halaman lain di repo ini) -->
+          <section class="rounded-2xl border border-line bg-white p-6" aria-labelledby="proyek">
+            <h2 id="proyek" class="mb-5 flex items-center gap-2 font-display text-xl font-bold">
+              <i class="ti ti-code text-indigo"></i> Proyek
+            </h2>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <a
+                href="index.html"
+                class="group rounded-xl border border-line p-4 transition hover:border-indigo hover:bg-indigo-soft/40"
+              >
+                <div class="mb-2 flex items-center justify-between">
+                  <h3 class="font-display font-bold">Landing Page Sinaptik AI</h3>
+                  <i class="ti ti-arrow-up-right text-muted transition group-hover:text-indigo"></i>
+                </div>
+                <p class="mb-3 text-sm text-muted">
+                  Landing page perusahaan jasa AI dengan HTML dan CSS murni: Flexbox, Grid, dan media query.
+                </p>
+                <span class="rounded-full bg-indigo-soft px-2.5 py-0.5 text-xs font-semibold text-indigo-dark">HTML + CSS</span>
+              </a>
+
+              <a
+                href="blog.html"
+                class="group rounded-xl border border-line p-4 transition hover:border-indigo hover:bg-indigo-soft/40"
+              >
+                <div class="mb-2 flex items-center justify-between">
+                  <h3 class="font-display font-bold">Blog AI</h3>
+                  <i class="ti ti-arrow-up-right text-muted transition group-hover:text-indigo"></i>
+                </div>
+                <p class="mb-3 text-sm text-muted">
+                  Daftar dan detail artikel bertema AI dengan komponen Bootstrap 5 dan Bootstrap Icons.
+                </p>
+                <span class="rounded-full bg-indigo-soft px-2.5 py-0.5 text-xs font-semibold text-indigo-dark">Bootstrap 5</span>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="space-y-6">
+          <!-- 3. PENDIDIKAN -->
+          <section class="rounded-2xl border border-line bg-white p-6" aria-labelledby="pendidikan">
+            <h2 id="pendidikan" class="mb-4 flex items-center gap-2 font-display text-xl font-bold">
+              <i class="ti ti-school text-indigo"></i> Pendidikan
+            </h2>
+            <ul class="space-y-4">
+              <li>
+                <h3 class="font-bold leading-snug">Institut Teknologi Del</h3>
+                <p class="text-sm text-muted">S1 Informatika</p>
+                <p class="text-sm font-medium text-indigo">2023 – sekarang</p>
+              </li>
+              <li>
+                <h3 class="font-bold leading-snug">SMA Negeri 1 (nama sekolahmu)</h3>
+                <p class="text-sm text-muted">Ilmu Pengetahuan Alam</p>
+                <p class="text-sm font-medium text-indigo">2020 – 2023</p>
+              </li>
+            </ul>
+          </section>
+
+          <!-- 5. KEAHLIAN — chip / badge memakai utility -->
+          <section class="rounded-2xl border border-line bg-white p-6" aria-labelledby="keahlian">
+            <h2 id="keahlian" class="mb-4 flex items-center gap-2 font-display text-xl font-bold">
+              <i class="ti ti-bolt text-indigo"></i> Keahlian
+            </h2>
+            <ul class="flex flex-wrap gap-2 text-sm font-medium">
+              <li class="rounded-full bg-indigo-soft px-3 py-1 text-indigo-dark transition hover:bg-indigo hover:text-white">HTML5</li>
+              <li class="rounded-full bg-indigo-soft px-3 py-1 text-indigo-dark transition hover:bg-indigo hover:text-white">CSS3</li>
+              <li class="rounded-full bg-indigo-soft px-3 py-1 text-indigo-dark transition hover:bg-indigo hover:text-white">Bootstrap 5</li>
+              <li class="rounded-full bg-indigo-soft px-3 py-1 text-indigo-dark transition hover:bg-indigo hover:text-white">Tailwind CSS 4</li>
+              <li class="rounded-full bg-indigo-soft px-3 py-1 text-indigo-dark transition hover:bg-indigo hover:text-white">JavaScript</li>
+              <li class="rounded-full bg-indigo-soft px-3 py-1 text-indigo-dark transition hover:bg-indigo hover:text-white">Python</li>
+              <li class="rounded-full bg-indigo-soft px-3 py-1 text-indigo-dark transition hover:bg-indigo hover:text-white">Git &amp; GitHub</li>
+              <li class="rounded-full bg-indigo-soft px-3 py-1 text-indigo-dark transition hover:bg-indigo hover:text-white">Figma</li>
+            </ul>
+          </section>
+
+          <!-- 6. SERTIFIKAT / PENGHARGAAN (opsional) -->
+          <section class="rounded-2xl border border-line bg-white p-6" aria-labelledby="sertifikat">
+            <h2 id="sertifikat" class="mb-4 flex items-center gap-2 font-display text-xl font-bold">
+              <i class="ti ti-award text-indigo"></i> Sertifikat
+            </h2>
+            <ul class="space-y-3 text-sm">
+              <li class="flex gap-3">
+                <i class="ti ti-certificate mt-0.5 text-lg text-signal"></i>
+                <div>
+                  <p class="font-bold leading-snug">Dasar Pemrograman Web</p>
+                  <p class="text-muted">Penyelenggara kursus · 2025</p>
+                </div>
+              </li>
+              <li class="flex gap-3">
+                <i class="ti ti-certificate mt-0.5 text-lg text-signal"></i>
+                <div>
+                  <p class="font-bold leading-snug">Pengantar Generative AI</p>
+                  <p class="text-muted">Penyelenggara kursus · 2026</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="bg-[#0a0f26] py-6 text-sm text-slate-400">
+      <div class="mx-auto flex max-w-5xl flex-col gap-3 px-4 md:flex-row md:items-center md:justify-between">
+        <a href="index.html" class="flex items-center gap-2 font-display text-lg font-extrabold text-white">
+          <img src="assets/img/logo.svg" alt="" class="size-7" />
+          <span>Sinaptik<span class="text-signal">AI</span></span>
+        </a>
+        <ul class="flex gap-5">
+          <li><a href="index.html" class="transition hover:text-signal">Beranda</a></li>
+          <li><a href="blog.html" class="transition hover:text-signal">Blog</a></li>
+          <li><a href="cv.html" class="transition hover:text-signal">CV</a></li>
+        </ul>
+        <p>&copy; 2026 Sinaptik AI. Dibuat untuk Praktikum PABWE.</p>
+      </div>
+    </footer>
+  </body>
+</html>

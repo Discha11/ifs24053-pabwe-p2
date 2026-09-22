@@ -1,0 +1,250 @@
+/* =========================================================
+   Penyesuaian kecil untuk halaman Bootstrap (blog & detail)
+   Tujuan: warna dan font mengikuti identitas Sinaptik AI
+   di landing page, tanpa mengganti Bootstrap.
+   File ini dimuat SETELAH bootstrap.min.css.
+   ========================================================= */
+
+:root {
+  /* Override variabel Bootstrap 5.3 dengan warna brand */
+  --bs-primary: #4a45e0;
+  --bs-primary-rgb: 74, 69, 224;
+  --bs-link-color: #4a45e0;
+  --bs-link-color-rgb: 74, 69, 224;
+  --bs-link-hover-color: #3a35c4;
+  --bs-link-hover-color-rgb: 58, 53, 196;
+  --bs-body-color: #161b3a;
+  --bs-body-color-rgb: 22, 27, 58;
+  --bs-secondary-color: #5b6385;
+  --bs-border-color: #dde1f0;
+  --bs-body-font-family: "DM Sans", "Segoe UI", sans-serif;
+
+  --brand-ink: #0f1533;
+  --brand-signal: #27d6a5;
+  --brand-paper: #f5f6fb;
+  --font-display: "Bricolage Grotesque", "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Navbar ---------- */
+.site-navbar {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.site-navbar .navbar-brand {
+  font-weight: 800;
+  font-size: 1.35rem;
+}
+
+.site-navbar .navbar-brand span {
+  color: var(--bs-primary);
+}
+
+.site-navbar .nav-link {
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 0.5rem 0.9rem;
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link.active {
+  background: var(--brand-paper);
+  color: var(--bs-primary);
+}
+
+/* ---------- Tombol brand ---------- */
+.btn-brand {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #3a35c4;
+  --bs-btn-hover-border-color: #3a35c4;
+  --bs-btn-active-bg: #302cab;
+  --bs-btn-active-border-color: #302cab;
+  --bs-btn-focus-shadow-rgb: 74, 69, 224;
+  font-weight: 700;
+  border-radius: 999px;
+}
+
+.btn-outline-brand {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: #3a35c4;
+  --bs-btn-active-border-color: #3a35c4;
+  font-weight: 700;
+  border-radius: 999px;
+}
+
+/* ---------- Pagination ---------- */
+.pagination {
+  --bs-pagination-color: var(--bs-primary);
+  --bs-pagination-hover-color: #3a35c4;
+  --bs-pagination-active-bg: var(--bs-primary);
+  --bs-pagination-active-border-color: var(--bs-primary);
+  --bs-pagination-focus-color: #3a35c4;
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(74, 69, 224, 0.25);
+}
+
+/* ---------- Page header (daftar blog) ---------- */
+.page-header {
+  background: var(--brand-ink);
+  color: #fff;
+}
+
+.page-header h1 {
+  font-weight: 800;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+}
+
+.page-header p {
+  max-width: 38rem;
+  color: #c3c8e6;
+}
+
+/* ---------- Filter kategori ---------- */
+.filter-bar .btn {
+  --bs-btn-padding-y: 0.35rem;
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-font-size: 0.95rem;
+  border-radius: 999px;
+}
+
+.filter-bar .btn.active {
+  background: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff;
+}
+
+/* ---------- Kartu artikel ---------- */
+.post-card {
+  border-color: var(--bs-border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  border-color: var(--bs-primary);
+  box-shadow: 0 12px 32px rgba(15, 21, 51, 0.1);
+}
+
+.post-card .card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post-card .card-title a:hover {
+  color: var(--bs-primary);
+}
+
+.post-meta {
+  font-size: 0.875rem;
+  color: var(--bs-secondary-color);
+}
+
+.post-meta i {
+  color: var(--bs-primary);
+}
+
+/* Badge kategori: gaya lembut, satu warna untuk semua kategori */
+.badge-cat {
+  background: #ecebfc;
+  color: #3a35c4;
+  font-weight: 600;
+}
+
+/* ---------- Detail artikel ---------- */
+.article-cover {
+  width: 100%;
+  border-radius: 20px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.article-body {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.article-body h2 {
+  margin-top: 2.25rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.article-body blockquote {
+  margin: 2rem 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 4px solid var(--brand-signal);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.article-body blockquote footer {
+  margin-top: 0.5rem;
+  font-family: var(--bs-body-font-family);
+  font-size: 0.9rem;
+  color: var(--bs-secondary-color);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #0a0f26;
+  color: #9aa3cf;
+}
+
+.site-footer a {
+  color: #9aa3cf;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-footer a:hover {
+  color: var(--brand-signal);
+}
+
+.site-footer .brand {
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+
+.site-footer .brand span {
+  color: var(--brand-signal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .post-card {
+    transition: none;
+  }
+}

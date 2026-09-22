@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sinaptik AI — Jasa Kecerdasan Buatan untuk Bisnis</title>
+    <meta
+      name="description"
+      content="Sinaptik AI membangun chatbot, otomasi proses, computer vision, dan analitik prediktif untuk bisnis di Indonesia."
+    />
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+
+    <!-- Google Fonts: Bricolage Grotesque (judul), DM Sans (teks), JetBrains Mono (kode) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS (wajib untuk halaman ini, tanpa Bootstrap/Tailwind) -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         HEADER + NAVBAR
+         Menu ke section di halaman ini (#layanan, #tentang, #kontak)
+         dan ke halaman lain proyek (Blog, CV).
+         Tombol hamburger memakai checkbox (tanpa JavaScript).
+    ====================================================== -->
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Navigasi utama">
+        <a href="index.html" class="logo">
+          <img src="assets/img/logo.svg" alt="" />
+          <span class="logo-text">Sinaptik<span>AI</span></span>
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Buka menu" />
+        <label for="menu-toggle" class="menu-button" aria-hidden="true"><span></span></label>
+
+        <ul class="nav-menu">
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- =====================================================
+           HERO
+           Judul utama, value proposition, dan tombol CTA.
+      ====================================================== -->
+      <section class="hero" id="beranda">
+        <div class="hero-inner container">
+          <div class="hero-text">
+            <h1>AI yang bekerja di dalam proses bisnis Anda, bukan hanya di slide presentasi.</h1>
+            <p class="hero-lead">
+              Sinaptik AI membangun chatbot, otomasi, dan sistem prediksi yang terhubung langsung
+              ke data dan alur kerja tim Anda. Dari ide sampai berjalan di produksi.
+            </p>
+            <div class="hero-actions">
+              <a href="#kontak" class="btn btn-primary">Konsultasi gratis</a>
+              <a href="#layanan" class="btn btn-outline">Lihat layanan</a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <img src="assets/img/hero-network.svg" alt="Ilustrasi jaringan saraf tiruan dengan titik-titik yang menyala" />
+            <div class="code-card" aria-hidden="true">
+              <p>&gt; agen.jalankan("rekap keluhan pelanggan minggu ini")</p>
+              <p class="ok">✓ 128 tiket dikelompokkan ke 6 tema</p>
+              <p class="cursor">&gt; kirim ringkasan ke tim CS</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           LAYANAN
+           Grid 5 kartu: kartu pertama (featured) melebar 2 kolom.
+      ====================================================== -->
+      <section class="section" id="layanan">
+        <div class="container">
+          <div class="section-head">
+            <h2>Layanan AI yang kami kerjakan</h2>
+            <p>
+              Lima layanan inti. Semuanya bisa dimulai dari satu masalah kecil yang ingin Anda
+              selesaikan lebih dulu.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card featured">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-5.4A8 8 0 1 1 21 12z" /></svg>
+              </div>
+              <h3>Chatbot &amp; Virtual Assistant</h3>
+              <p>
+                Asisten percakapan untuk layanan pelanggan, HR, atau helpdesk internal. Menjawab
+                dari dokumen dan data perusahaan Anda, lalu menyerahkan ke manusia saat perlu.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="6" height="6" rx="1.5" /><rect x="15" y="14" width="6" height="6" rx="1.5" /><path d="M9 7h4a2 2 0 0 1 2 2v5" /></svg>
+              </div>
+              <h3>Automasi Bisnis</h3>
+              <p>Mengubah pekerjaan berulang seperti input data, verifikasi dokumen, dan pelaporan menjadi alur otomatis.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" /></svg>
+              </div>
+              <h3>Computer Vision</h3>
+              <p>Deteksi cacat produk, hitung stok dari foto, dan baca dokumen dengan OCR yang dilatih untuk kasus Anda.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18" /><path d="M7 15l4-5 3 3 5-7" /></svg>
+              </div>
+              <h3>Analitik Prediktif</h3>
+              <p>Perkiraan permintaan, risiko churn, atau kebutuhan perawatan mesin dari data historis Anda.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z" /><path d="M3 13l9 5 9-5" /></svg>
+              </div>
+              <h3>RAG &amp; Fine-tuning Model</h3>
+              <p>Menyambungkan model bahasa ke basis pengetahuan Anda, atau menyesuaikannya untuk istilah dan gaya bahasa industri Anda.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           TENTANG / KEUNGGULAN
+           Flexbox 2 kolom: cerita singkat + daftar keunggulan.
+      ====================================================== -->
+      <section class="section section-alt" id="tentang">
+        <div class="container about">
+          <div class="about-text">
+            <h2>Tim kecil yang terbiasa mengirim sistem AI sampai dipakai.</h2>
+            <p>
+              Sinaptik AI berisi insinyur data, pengembang web, dan desainer produk. Kami percaya
+              proyek AI yang berhasil ditentukan oleh data yang rapi dan alur kerja yang jelas,
+              bukan hanya oleh model yang paling besar.
+            </p>
+            <p>
+              Karena itu kami mulai dengan memahami proses Anda, membuat prototipe yang bisa dicoba
+              tim Anda sendiri, lalu memperbaikinya bersama-sama.
+            </p>
+          </div>
+
+          <ul class="about-list">
+            <li>
+              <strong>Mulai dari masalah, bukan dari model</strong>
+              <span>Kami memilih teknologi paling sederhana yang cukup untuk menyelesaikan kasus Anda.</span>
+            </li>
+            <li>
+              <strong>Data Anda tetap milik Anda</strong>
+              <span>Akses data dibatasi, dicatat, dan bisa dijalankan di infrastruktur Anda sendiri.</span>
+            </li>
+            <li>
+              <strong>Prototipe dalam tiga minggu</strong>
+              <span>Anda bisa mencoba hasil nyata sebelum memutuskan investasi yang lebih besar.</span>
+            </li>
+            <li>
+              <strong>Pendampingan setelah rilis</strong>
+              <span>Kami memantau akurasi dan biaya, lalu melatih tim Anda untuk mengelola sistemnya.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           KONTAK / CALL TO ACTION
+           Form sederhana: nama, email, pesan + tombol kirim.
+      ====================================================== -->
+      <section class="section" id="kontak">
+        <div class="container contact">
+          <div class="contact-info">
+            <h2>Ceritakan masalah yang ingin Anda selesaikan.</h2>
+            <p>
+              Tim kami akan membalas dalam satu hari kerja dengan pertanyaan lanjutan dan gambaran
+              langkah awal. Sesi konsultasi pertama gratis.
+            </p>
+            <p>
+              Atau tulis langsung ke
+              <a href="mailto:halo@sinaptik.example">halo@sinaptik.example</a>
+            </p>
+          </div>
+
+          <form class="contact-form" action="#kontak" method="post">
+            <div class="form-group">
+              <label for="nama">Nama</label>
+              <input type="text" id="nama" name="nama" placeholder="Nama lengkap Anda" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="nama@perusahaan.com" required />
+            </div>
+            <div class="form-group">
+              <label for="pesan">Pesan</label>
+              <textarea id="pesan" name="pesan" placeholder="Contoh: kami ingin mengotomatiskan pengecekan invoice..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim pesan</button>
+            <p class="form-note">Form ini hanya contoh tampilan untuk praktikum.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+         Nama perusahaan, tahun, dan link cepat.
+    ====================================================== -->
+    <footer class="site-footer">
+      <div class="footer-inner container">
+        <a href="index.html" class="logo">
+          <img src="assets/img/logo.svg" alt="" />
+          <span class="logo-text">Sinaptik<span>AI</span></span>
+        </a>
+
+        <nav class="footer-links" aria-label="Tautan cepat">
+          <a href="#layanan">Layanan</a>
+          <a href="#tentang">Tentang</a>
+          <a href="#kontak">Kontak</a>
+          <a href="blog.html">Blog</a>
+          <a href="cv.html">CV</a>
+        </nav>
+
+        <p>&copy; 2026 Sinaptik AI. Dibuat untuk Praktikum PABWE.</p>
+      </div>
+    </footer>
+  </body>
+</html>
