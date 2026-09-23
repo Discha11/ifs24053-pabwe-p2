@@ -2,13 +2,11 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <!-- Viewport wajib agar utility responsive (sm:/md:/lg:) bekerja -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV — Nama Lengkap Kamu</title>
+    <title>CV — Discha Uli Virghylia Hutasoit</title>
     <meta name="description" content="Curriculum Vitae digital: profil, pendidikan, pengalaman, keahlian, dan proyek." />
     <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
 
-    <!-- Google Fonts (sama dengan halaman lain agar brand konsisten) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,24 +14,12 @@
       rel="stylesheet"
     />
 
-    
-    <!-- Tailwind CSS 4 — Play CDN (untuk praktikum / prototyping) -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <!-- Tabler Icons (webfont): pakai class "ti ti-nama-ikon" -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
     />
 
-    <!--
-      Tailwind v4: konfigurasi lewat CSS dengan @theme.
-      Token di bawah menghasilkan class baru, misalnya:
-      --color-ink     → bg-ink, text-ink, border-ink
-      --color-indigo  → bg-indigo, text-indigo
-      --font-display  → font-display
-      Warnanya sama dengan landing page & blog agar brand konsisten.
-    -->
     <style type="text/tailwindcss">
       @theme {
         --color-ink: #0f1533;
@@ -57,10 +43,6 @@
   </head>
 
   <body class="bg-paper font-sans text-ink antialiased">
-    <!-- =====================================================
-         NAVBAR
-         sticky + flex + responsive. Link ke Beranda, Blog, CV.
-    ====================================================== -->
     <header class="sticky top-0 z-50 border-b border-line bg-white/90 backdrop-blur">
       <nav
         class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3"
@@ -95,11 +77,7 @@
     </header>
 
     <main class="mx-auto max-w-5xl px-4 py-8 md:py-12">
-      <!-- =====================================================
-           1. HEADER PROFIL
-           ⚠ GANTI semua data di halaman ini dengan data dirimu sendiri.
-           Foto: ganti assets/img/avatar.svg dengan foto (mis. foto.jpg).
-      ====================================================== -->
+    
       <section
         class="flex flex-col items-center gap-6 rounded-3xl bg-ink p-6 text-white md:flex-row md:items-start md:gap-8 md:p-10"
         aria-labelledby="nama"
@@ -112,42 +90,37 @@
 
         <div class="text-center md:text-left">
           <h1 id="nama" class="font-display text-3xl font-extrabold tracking-tight md:text-5xl">
-            Nama Lengkap Kamu
+            Discha Uli Virghylia Hutasoit
           </h1>
           <p class="mt-2 text-lg font-medium text-signal">Aspiring AI Engineer &amp; Full-Stack Developer</p>
 
-          <!-- Kontak: 1 kolom di mobile, 2 kolom mulai sm -->
+
           <ul class="mt-6 grid gap-x-8 gap-y-2 text-sm text-slate-300 sm:grid-cols-2">
             <li class="flex items-center justify-center gap-2 md:justify-start">
               <i class="ti ti-mail text-signal"></i>
-              <a href="mailto:nama.kamu@email.com" class="transition hover:text-white">nama.kamu@email.com</a>
+              <a href="mailto:nama.kamu@email.com" class="transition hover:text-white">dischavirghy@gmail.com</a>
             </li>
             <li class="flex items-center justify-center gap-2 md:justify-start">
               <i class="ti ti-brand-whatsapp text-signal"></i>
-              <a href="https://wa.me/6281200000000" target="_blank" rel="noopener" class="transition hover:text-white">+62 812-0000-0000</a>
+              <a href="https://wa.me/6281200000000" target="_blank" rel="noopener" class="transition hover:text-white">+62 821-6864-2292</a>
             </li>
             <li class="flex items-center justify-center gap-2 md:justify-start">
               <i class="ti ti-map-pin text-signal"></i>
-              <span>Sumatera Utara, Indonesia</span>
+              <span>Acehe, Indonesia</span>
             </li>
             <li class="flex items-center justify-center gap-2 md:justify-start">
               <i class="ti ti-brand-github text-signal"></i>
-              <a href="https://github.com/username" target="_blank" rel="noopener" class="transition hover:text-white">github.com/username</a>
+              <a href="https://github.com/Discha11" target="_blank" rel="noopener" class="transition hover:text-white">github.com/Discha11</a>
             </li>
             <li class="flex items-center justify-center gap-2 md:justify-start">
               <i class="ti ti-brand-linkedin text-signal"></i>
-              <a href="https://linkedin.com/in/username" target="_blank" rel="noopener" class="transition hover:text-white">linkedin.com/in/username</a>
+              <a href="https://www.linkedin.com/in/dischauliv/" target="_blank" rel="noopener" class="transition hover:text-white">linkedin.com/in/dischauliv/</a>
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- =====================================================
-           LAYOUT 2 KOLOM (1 kolom di mobile, 3 kolom grid di md)
-           Kolom utama = 2/3 lebar; sidebar = 1/3 lebar.
-      ====================================================== -->
       <div class="mt-6 grid gap-6 md:grid-cols-3">
-        <!-- ================= KOLOM UTAMA ================= -->
         <div class="space-y-6 md:col-span-2">
           <!-- 2. RINGKASAN -->
           <section class="rounded-2xl border border-line bg-white p-6" aria-labelledby="ringkasan">
@@ -249,7 +222,7 @@
                 <p class="text-sm font-medium text-indigo">2023 – sekarang</p>
               </li>
               <li>
-                <h3 class="font-bold leading-snug">SMA Negeri 1 (nama sekolahmu)</h3>
+                <h3 class="font-bold leading-snug">SMA Negeri 1 (Takengon)</h3>
                 <p class="text-sm text-muted">Ilmu Pengetahuan Alam</p>
                 <p class="text-sm font-medium text-indigo">2020 – 2023</p>
               </li>

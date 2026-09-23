@@ -124,11 +124,6 @@ ul {
 }
 
 
-/* =========================================================
-   4. CONTAINER
-   min() memilih nilai terkecil: lebar layar dikurangi 32px
-   (jarak kiri-kanan) atau lebar maksimum container.
-   ========================================================= */
 
 .container {
   width: min(100% - 32px, var(--container-width));
@@ -136,11 +131,6 @@ ul {
 }
 
 
-/* =========================================================
-   5. HEADER + NAVBAR
-   position: sticky → header menempel di atas saat scroll.
-   Navbar memakai Flexbox: logo di kiri, menu di kanan.
-   ========================================================= */
 
 .site-header {
   position: sticky;
